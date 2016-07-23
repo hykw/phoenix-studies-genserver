@@ -12,6 +12,7 @@ defmodule Study do
       supervisor(Study.Endpoint, []),
       # Start your own worker by calling: Study.Worker.start_link(arg1, arg2, arg3)
       # worker(Study.Worker, [arg1, arg2, arg3]),
+      worker(Study.Counter, [0])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
