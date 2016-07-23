@@ -1,10 +1,3 @@
 # phoenix-studies-genserver
-Phoenix x GenServer
 
-## 前準備
-
-```bash
-mix phoenix.new study --no-brunch --no-ecto
-```
-
-※他で使ってるので、portは5000に変更
+Qiita に投稿した「[Phoenix で Supervisor の Worker を作ってアクセスしてみる](http://qiita.com/hykw/items/e918918b3bcbee1e99f9)」のソースコード
