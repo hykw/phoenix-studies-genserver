@@ -18,6 +18,7 @@ defmodule Study.Router do
 
     get "/", PageController, :index
     get "/kill", PageController, :kill
+    get "/exit", PageController, :exit
   end
 
   # Other scopes may use custom stacks.

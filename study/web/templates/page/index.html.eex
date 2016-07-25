@@ -12,6 +12,7 @@
     </ul>
   </div>
 
-  <a href="<%= page_path(@conn, :kill) %>">/kill</a>
+  <a href="<%= page_path(@conn, :kill) %>">/kill</a><br />
+  <a href="<%= page_path(@conn, :exit) %>">/exit</a><br />
 
 </div>

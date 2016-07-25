@@ -12,11 +12,18 @@ defmodule Study.PageController do
     process_name.inc
   end
 
-
-  def kill(conn, _) do
-    Study.Counter.kill()
+  defp redirect_to_top(conn) do
     url = page_path(conn, :index)
     redirect(conn, to: url)
   end
 
+  def kill(conn, _) do
+    Study.Counter.kill()
+    redirect_to_top(conn)
+  end
+
+  def exit(conn, _) do
+    Study.Counter.exit()
+    redirect_to_top(conn)
+  end
 end

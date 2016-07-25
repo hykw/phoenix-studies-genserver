@@ -19,6 +19,11 @@ defmodule Study.Counter do
     GenServer.cast(__MODULE__, :kill)
   end
 
+  def exit do
+    Process.whereis(__MODULE__)
+    |> Process.exit(:kill)
+  end
+
 
   ####################
   def handle_call(:get_state, _from, state) do
@@ -29,6 +34,7 @@ defmodule Study.Counter do
     new_state = %{count: state.count+1, last_message: "inc呼び出し"}
     {:noreply, new_state}
   end
+
 
 end
 
